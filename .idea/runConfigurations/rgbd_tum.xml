@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="rgbd_tum" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="$PROJECT_DIR$/Vocabulary/ORBvoc.txt $PROJECT_DIR$/Examples/RGB-D/TUM1.yaml $USER_HOME$/datasets/rgbd/rgbd_room/ $USER_HOME$/datasets/rgbd/rgbd_room/associations.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="rgbd_tum" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="rgbd_tum">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>

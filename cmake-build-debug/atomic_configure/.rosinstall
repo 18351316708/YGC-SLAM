@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/xin/vins_ws/src/ORB_SLAM2/cmake-build-debug/devel/setup.sh

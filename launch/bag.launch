@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- <remap from="/camera/depth_registered/camera_info" to="/camera/depth/camera_info"/> -->
+  <!-- <remap from="/camera/depth_registered/image_raw" to="/camera/depth/image_raw"/> -->
+  <node pkg="rosbag" type="play" name="playe" output="screen" args="--clock /home/xin/datasets/rgbd/bag/d435/200.bag"/>
+  <!-- 注意这里bag文件的路径必须为绝对路径-->
+</launch>
+

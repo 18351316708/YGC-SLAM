@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+        <include file="/home/xin/vins_ws/src/ORB_SLAM2/launch/Octomap.launch" />
+	<include file="/home/xin/vins_ws/src/ORB_SLAM2/launch/transform.launch" />
+	<include file="/home/xin/vins_ws/src/ORB_SLAM2/launch/local.launch" />
+
+</launch>

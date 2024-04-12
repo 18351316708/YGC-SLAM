@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+        <include file="/home/xin/turtlebot3_ws/src/ORB_SLAM3_PRO/launch/Octomap.launch" />
+	<include file="/home/xin/turtlebot3_ws/src/ORB_SLAM3_PRO/launch/transformcorr.launch" />
+	<node pkg="rviz" name="rviz" type="rviz" /> 
+
+</launch>

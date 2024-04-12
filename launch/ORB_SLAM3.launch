@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch> 
+  <node pkg="ORB_SLAM3_MAX" type="d455" name="ORB_SLAM3_MAX" output="screen"
+        args="/home/xin/turtlebot3_ws/src/ORB_SLAM3_PRO/Vocabulary/ORBvoc.bin
+         /home/xin/turtlebot3_ws/src/ORB_SLAM3_PRO/D435I.yaml" /> 
+</launch>
+

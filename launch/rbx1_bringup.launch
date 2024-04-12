@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch> 
+  <node pkg="rbx1" type="rbx1_bringup" name="rbx1_bringup" output="screen"
+        args="/home/xin/turtlebot3_ws/src/rbx1/rbx1_bringup/launch/fake_turtlebot.launch" /> 
+</launch>
+

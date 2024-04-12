@@ -1,0 +1,52 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/xin/project_ws2/src/ORB_SLAM2_dense_yolov5/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9qA8gK
+
+Run Build Command(s):/home/xin/software/CLion-2023.1/clion-2023.1/bin/ninja/linux/x64/ninja cmTC_48ea6 && [1/2] Building C object CMakeFiles/cmTC_48ea6.dir/src.c.o
+[2/2] Linking C executable cmTC_48ea6
+FAILED: cmTC_48ea6 
+: && /usr/bin/cc -Wall  -O3 -rdynamic CMakeFiles/cmTC_48ea6.dir/src.c.o -o cmTC_48ea6   && :
+CMakeFiles/cmTC_48ea6.dir/src.c.o：在函数‘main’中：
+src.c:(.text.startup+0x23)：对‘pthread_create’未定义的引用
+src.c:(.text.startup+0x2c)：对‘pthread_detach’未定义的引用
+src.c:(.text.startup+0x35)：对‘pthread_cancel’未定义的引用
+src.c:(.text.startup+0x40)：对‘pthread_join’未定义的引用
+src.c:(.text.startup+0x4b)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/xin/project_ws2/src/ORB_SLAM2_dense_yolov5/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bgLvPk
+
+Run Build Command(s):/home/xin/software/CLion-2023.1/clion-2023.1/bin/ninja/linux/x64/ninja cmTC_7260b && [1/2] Building C object CMakeFiles/cmTC_7260b.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_7260b
+FAILED: cmTC_7260b 
+: && /usr/bin/cc -Wall  -O3   -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_7260b.dir/CheckFunctionExists.c.o -o cmTC_7260b  -lpthreads && :
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
